@@ -56,8 +56,8 @@ void Minesweeper::OnPointerMoved(float2 point)
 	point -= realOffset;
 	point /= scale;
 
-	int x = point.x / (m_tileSize.x + m_margin.x);
-	int y = point.y / (m_tileSize.y + m_margin.y);
+    int x = static_cast<int>(point.x / (m_tileSize.x + m_margin.x));
+    int y = static_cast<int>(point.y / (m_tileSize.y + m_margin.y));
 	int index = x * m_gameBoardHeight + y;
 
 	if ((x >= 0 && x < m_gameBoardWidth) &&
@@ -120,7 +120,7 @@ void Minesweeper::NewGame(int boardWidth, int boardHeight, int mines)
 
 	m_gameBoard.Children().RemoveAll();
 
-	m_gameBoard.Size((m_tileSize + m_margin) * float2(m_gameBoardWidth, m_gameBoardHeight));
+	m_gameBoard.Size((m_tileSize + m_margin) * float2(static_cast<float>(m_gameBoardWidth), static_cast<float>(m_gameBoardHeight)));
 
 	for (int x = 0; x < m_gameBoardWidth; x++)
 	{
@@ -128,7 +128,7 @@ void Minesweeper::NewGame(int boardWidth, int boardHeight, int mines)
 		{
 			SpriteVisual visual = m_compositor.CreateSpriteVisual();
 			visual.Size(m_tileSize);
-			visual.Offset(float3((m_margin / 2.0f) + (float2(m_tileSize + m_margin) * float2(x, y)), 0.0f));
+			visual.Offset(float3((m_margin / 2.0f) + (float2(m_tileSize + m_margin) * float2(static_cast<float>(x), static_cast<float>(y))), 0.0f));
 			visual.Brush(m_compositor.CreateColorBrush(Colors::Blue()));
 
 			m_gameBoard.Children().InsertAtTop(visual);
@@ -293,7 +293,7 @@ void Minesweeper::GenerateMines(int numMines)
 		}
 	}
 
-	srand(time(0));
+	srand(static_cast<uint32_t>(time(0)));
 	for (int i = 0; i < numMines; i++)
 	{
 		int index = -1;
@@ -306,7 +306,7 @@ void Minesweeper::GenerateMines(int numMines)
 	}
 
 	m_neighborCounts.clear();
-	for (int i = 0; i < m_mines.size(); i++)
+	for (int i = 0; i < static_cast<int>(m_mines.size()); i++)
 	{
 		int x = ComputeXFromIndex(i);
 		int y = ComputeYFromIndex(i);
