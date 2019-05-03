@@ -115,6 +115,9 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</MultiProcessorCompilation>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</MultiProcessorCompilation>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">onecore.lib</AdditionalDependencies>
@@ -131,6 +134,9 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</MultiProcessorCompilation>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</MultiProcessorCompilation>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">onecore.lib</AdditionalDependencies>
@@ -143,10 +149,105 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AmbientLight.cpp" />
+    <ClCompile Include="AnimationController.cpp" />
+    <ClCompile Include="AnimationPropertyInfo.cpp" />
+    <ClCompile Include="BooleanKeyFrameAnimation.cpp" />
+    <ClCompile Include="BounceScalarNaturalMotionAnimation.cpp" />
+    <ClCompile Include="BounceVector2NaturalMotionAnimation.cpp" />
+    <ClCompile Include="BounceVector3NaturalMotionAnimation.cpp" />
+    <ClCompile Include="ColorKeyFrameAnimation.cpp" />
+    <ClCompile Include="CompositionAnimation.cpp" />
+    <ClCompile Include="CompositionAnimationGroup.cpp" />
+    <ClCompile Include="CompositionBackdropBrush.cpp" />
+    <ClCompile Include="CompositionBatchCompletedEventArgs.cpp" />
+    <ClCompile Include="CompositionBrush.cpp" />
+    <ClCompile Include="CompositionCapabilities.cpp" />
+    <ClCompile Include="CompositionClip.cpp" />
+    <ClCompile Include="CompositionColorBrush.cpp" />
+    <ClCompile Include="CompositionColorGradientStop.cpp" />
+    <ClCompile Include="CompositionColorGradientStopCollection.cpp" />
+    <ClCompile Include="CompositionCommitBatch.cpp" />
+    <ClCompile Include="CompositionContainerShape.cpp" />
+    <ClCompile Include="CompositionDrawingSurface.cpp" />
+    <ClCompile Include="CompositionEasingFunction.cpp" />
+    <ClCompile Include="CompositionEffectBrush.cpp" />
+    <ClCompile Include="CompositionEffectFactory.cpp" />
+    <ClCompile Include="CompositionEffectSourceParameter.cpp" />
+    <ClCompile Include="CompositionEllipseGeometry.cpp" />
+    <ClCompile Include="CompositionGeometricClip.cpp" />
+    <ClCompile Include="CompositionGeometry.cpp" />
+    <ClCompile Include="CompositionGradientBrush.cpp" />
+    <ClCompile Include="CompositionGraphicsDevice.cpp" />
+    <ClCompile Include="CompositionLight.cpp" />
+    <ClCompile Include="CompositionLinearGradientBrush.cpp" />
+    <ClCompile Include="CompositionLineGeometry.cpp" />
+    <ClCompile Include="CompositionMaskBrush.cpp" />
+    <ClCompile Include="CompositionMipmapSurface.cpp" />
+    <ClCompile Include="CompositionNineGridBrush.cpp" />
+    <ClCompile Include="CompositionObject.cpp" />
+    <ClCompile Include="CompositionPath.cpp" />
+    <ClCompile Include="CompositionPathGeometry.cpp" />
+    <ClCompile Include="CompositionProjectedShadow.cpp" />
+    <ClCompile Include="CompositionProjectedShadowCaster.cpp" />
+    <ClCompile Include="CompositionProjectedShadowCasterCollection.cpp" />
+    <ClCompile Include="CompositionProjectedShadowReceiver.cpp" />
+    <ClCompile Include="CompositionProjectedShadowReceiverUnorderedCollection.cpp" />
+    <ClCompile Include="CompositionPropertySet.cpp" />
+    <ClCompile Include="CompositionRadialGradientBrush.cpp" />
+    <ClCompile Include="CompositionRectangleGeometry.cpp" />
+    <ClCompile Include="CompositionRoundedRectangleGeometry.cpp" />
+    <ClCompile Include="CompositionScopedBatch.cpp" />
+    <ClCompile Include="CompositionShadow.cpp" />
+    <ClCompile Include="CompositionShape.cpp" />
+    <ClCompile Include="CompositionShapeCollection.cpp" />
+    <ClCompile Include="CompositionSpriteShape.cpp" />
+    <ClCompile Include="CompositionStrokeDashArray.cpp" />
+    <ClCompile Include="CompositionSurfaceBrush.cpp" />
+    <ClCompile Include="CompositionTarget.cpp" />
+    <ClCompile Include="CompositionTransform.cpp" />
+    <ClCompile Include="CompositionViewBox.cpp" />
+    <ClCompile Include="CompositionVirtualDrawingSurface.cpp" />
+    <ClCompile Include="CompositionVisualSurface.cpp" />
+    <ClCompile Include="Compositor.cpp" />
+    <ClCompile Include="ContainerVisual.cpp" />
+    <ClCompile Include="CubicBezierEasingFunction.cpp" />
+    <ClCompile Include="DistantLight.cpp" />
+    <ClCompile Include="DropShadow.cpp" />
+    <ClCompile Include="ExpressionAnimation.cpp" />
+    <ClCompile Include="ImplicitAnimationCollection.cpp" />
+    <ClCompile Include="InitialValueExpressionCollection.cpp" />
+    <ClCompile Include="InsetClip.cpp" />
+    <ClCompile Include="KeyFrameAnimation.cpp" />
+    <ClCompile Include="LayerVisual.cpp" />
+    <ClCompile Include="LinearEasingFunction.cpp" />
+    <ClCompile Include="NaturalMotionAnimation.cpp" />
+    <ClCompile Include="PathKeyFrameAnimation.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="PointLight.cpp" />
+    <ClCompile Include="QuaternionKeyFrameAnimation.cpp" />
+    <ClCompile Include="RedirectVisual.cpp" />
+    <ClCompile Include="RenderingDeviceReplacedEventArgs.cpp" />
+    <ClCompile Include="ScalarKeyFrameAnimation.cpp" />
+    <ClCompile Include="ScalarNaturalMotionAnimation.cpp" />
+    <ClCompile Include="ShapeVisual.cpp" />
+    <ClCompile Include="SpotLight.cpp" />
+    <ClCompile Include="SpringScalarNaturalMotionAnimation.cpp" />
+    <ClCompile Include="SpringVector2NaturalMotionAnimation.cpp" />
+    <ClCompile Include="SpringVector3NaturalMotionAnimation.cpp" />
+    <ClCompile Include="SpriteVisual.cpp" />
+    <ClCompile Include="StepEasingFunction.cpp" />
+    <ClCompile Include="Vector2KeyFrameAnimation.cpp" />
+    <ClCompile Include="Vector2NaturalMotionAnimation.cpp" />
+    <ClCompile Include="Vector3KeyFrameAnimation.cpp" />
+    <ClCompile Include="Vector3NaturalMotionAnimation.cpp" />
+    <ClCompile Include="Vector4KeyFrameAnimation.cpp" />
+    <ClCompile Include="Visual.cpp" />
+    <ClCompile Include="VisualCollection.cpp" />
+    <ClCompile Include="VisualUnorderedCollection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="FastWindows.UI.Composition.idl" />

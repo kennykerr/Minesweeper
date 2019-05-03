@@ -30,6 +30,5 @@ namespace winrt::FastWindows::UI::Composition::implementation
     }
     void CompositionScopedBatch::Completed(winrt::event_token const& token) noexcept
     {
-        throw hresult_not_implemented();
     }
 }
