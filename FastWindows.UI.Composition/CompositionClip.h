@@ -6,7 +6,12 @@ namespace winrt::FastWindows::UI::Composition::implementation
 {
     struct CompositionClip : CompositionClipT<CompositionClip, FastWindows::UI::Composition::implementation::CompositionObject>
     {
-        CompositionClip() = default;
+        Windows::UI::Composition::CompositionClip m_object{ nullptr };
+
+        CompositionClip(Windows::UI::Composition::CompositionClip const& object) :
+            m_object(object)
+        {
+        }
 
         Windows::Foundation::Numerics::float2 AnchorPoint();
         void AnchorPoint(Windows::Foundation::Numerics::float2 value);

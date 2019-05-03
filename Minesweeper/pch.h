@@ -1,8 +1,6 @@
 ﻿#pragma once
 
-#include <windows.h>
 #include <Unknwn.h>
-#include <inspectable.h>
 
 #include <winrt/Windows.ApplicationModel.Core.h>
 #include <winrt/Windows.Foundation.h>

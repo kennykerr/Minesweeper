@@ -5,6 +5,8 @@ namespace winrt::FastWindows::UI::Composition::implementation
 {
     struct Compositor : CompositorT<Compositor>
     {
+        Windows::UI::Composition::Compositor m_object;
+
         Compositor() = default;
 
         static float MaxGlobalPlaybackRate();

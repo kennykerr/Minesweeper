@@ -1,6 +1,11 @@
 #include "pch.h"
 #include "Compositor.h"
 #include "Compositor.g.cpp"
+#include "ContainerVisual.h"
+#include "CompositionTarget.h"
+#include "SpriteVisual.h"
+#include "CompositionColorBrush.h"
+#include "CompositionNineGridBrush.h"
 
 namespace winrt::FastWindows::UI::Composition::implementation
 {
@@ -18,15 +23,15 @@ namespace winrt::FastWindows::UI::Composition::implementation
     }
     FastWindows::UI::Composition::CompositionColorBrush Compositor::CreateColorBrush()
     {
-        throw hresult_not_implemented();
+        return make<CompositionColorBrush>(m_object.CreateColorBrush());
     }
     FastWindows::UI::Composition::CompositionColorBrush Compositor::CreateColorBrush(Windows::UI::Color const& color)
     {
-        throw hresult_not_implemented();
+        return make<CompositionColorBrush>(m_object.CreateColorBrush(color));
     }
     FastWindows::UI::Composition::ContainerVisual Compositor::CreateContainerVisual()
     {
-        throw hresult_not_implemented();
+        return make<ContainerVisual>(m_object.CreateContainerVisual());
     }
     FastWindows::UI::Composition::CubicBezierEasingFunction Compositor::CreateCubicBezierEasingFunction(Windows::Foundation::Numerics::float2 const& controlPoint1, Windows::Foundation::Numerics::float2 const& controlPoint2)
     {
@@ -78,7 +83,7 @@ namespace winrt::FastWindows::UI::Composition::implementation
     }
     FastWindows::UI::Composition::SpriteVisual Compositor::CreateSpriteVisual()
     {
-        throw hresult_not_implemented();
+        return make<SpriteVisual>(m_object.CreateSpriteVisual());
     }
     FastWindows::UI::Composition::CompositionSurfaceBrush Compositor::CreateSurfaceBrush()
     {
@@ -90,7 +95,7 @@ namespace winrt::FastWindows::UI::Composition::implementation
     }
     FastWindows::UI::Composition::CompositionTarget Compositor::CreateTargetForCurrentView()
     {
-        throw hresult_not_implemented();
+        return make<CompositionTarget>(m_object.CreateTargetForCurrentView());
     }
     FastWindows::UI::Composition::Vector2KeyFrameAnimation Compositor::CreateVector2KeyFrameAnimation()
     {
@@ -146,7 +151,7 @@ namespace winrt::FastWindows::UI::Composition::implementation
     }
     FastWindows::UI::Composition::CompositionNineGridBrush Compositor::CreateNineGridBrush()
     {
-        throw hresult_not_implemented();
+        return make<CompositionNineGridBrush>(m_object.CreateNineGridBrush());
     }
     FastWindows::UI::Composition::PointLight Compositor::CreatePointLight()
     {

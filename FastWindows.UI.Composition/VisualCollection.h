@@ -6,7 +6,12 @@ namespace winrt::FastWindows::UI::Composition::implementation
 {
     struct VisualCollection : VisualCollectionT<VisualCollection, FastWindows::UI::Composition::implementation::CompositionObject>
     {
-        VisualCollection() = default;
+        Windows::UI::Composition::VisualCollection m_object;
+
+        VisualCollection(Windows::UI::Composition::VisualCollection const& object) :
+            m_object(object)
+        {
+        }
 
         Windows::Foundation::Collections::IIterator<FastWindows::UI::Composition::Visual> First();
         int32_t Count();

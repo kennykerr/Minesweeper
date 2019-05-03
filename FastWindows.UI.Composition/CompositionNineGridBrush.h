@@ -6,7 +6,13 @@ namespace winrt::FastWindows::UI::Composition::implementation
 {
     struct CompositionNineGridBrush : CompositionNineGridBrushT<CompositionNineGridBrush, FastWindows::UI::Composition::implementation::CompositionBrush>
     {
-        CompositionNineGridBrush() = default;
+        Windows::UI::Composition::CompositionNineGridBrush m_object;
+
+        CompositionNineGridBrush(Windows::UI::Composition::CompositionNineGridBrush const& object) :
+            base_type(object),
+            m_object(object)
+        {
+        }
 
         float BottomInset();
         void BottomInset(float value);

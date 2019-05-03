@@ -6,7 +6,12 @@ namespace winrt::FastWindows::UI::Composition::implementation
 {
     struct Visual : VisualT<Visual, FastWindows::UI::Composition::implementation::CompositionObject>
     {
-        Visual() = default;
+        Windows::UI::Composition::Visual m_object;
+
+        Visual(Windows::UI::Composition::Visual const& object) :
+            m_object(object)
+        {
+        }
 
         Windows::Foundation::Numerics::float2 AnchorPoint();
         void AnchorPoint(Windows::Foundation::Numerics::float2 value);
