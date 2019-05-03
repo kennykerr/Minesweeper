@@ -30,6 +30,7 @@
   <ItemGroup>
     <None Include="Minesweeper_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="PropertySheet.props" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">

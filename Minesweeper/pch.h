@@ -15,6 +15,7 @@
 #include <winrt/Windows.Graphics.Display.h>
 #include <winrt/Windows.Foundation.Metadata.h>
 #include <winrt/Windows.UI.Input.h>
+#include <winrt/FastWindows.UI.Composition.h>
 
 #include <vector>
 #include <random>

@@ -5,17 +5,22 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Minesweeper", "Minesweeper\Minesweeper.vcxproj", "{93E6CAC0-A654-47B9-BFCF-B7474D7FA7C2}"
 	ProjectSection(ProjectDependencies) = postProject
+		{1A99E506-3E29-4AD6-94CE-DA993D2E582F} = {1A99E506-3E29-4AD6-94CE-DA993D2E582F}
 		{9CBCE764-E914-4EEF-8022-FA7FBE9F1F02} = {9CBCE764-E914-4EEF-8022-FA7FBE9F1F02}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msweepcore", "msweepcore\msweepcore.vcxproj", "{9CBCE764-E914-4EEF-8022-FA7FBE9F1F02}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1A99E506-3E29-4AD6-94CE-DA993D2E582F} = {1A99E506-3E29-4AD6-94CE-DA993D2E582F}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Minesweeper.Win32", "Minesweeper.Win32\Minesweeper.Win32.vcxproj", "{855940A1-6D41-49F3-9421-C0D813B23C7B}"
 	ProjectSection(ProjectDependencies) = postProject
+		{1A99E506-3E29-4AD6-94CE-DA993D2E582F} = {1A99E506-3E29-4AD6-94CE-DA993D2E582F}
 		{9CBCE764-E914-4EEF-8022-FA7FBE9F1F02} = {9CBCE764-E914-4EEF-8022-FA7FBE9F1F02}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FastComposition", "FastComposition\FastComposition.vcxproj", "{1A99E506-3E29-4AD6-94CE-DA993D2E582F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FastWindows.UI.Composition", "FastWindows.UI.Composition\FastWindows.UI.Composition.vcxproj", "{1A99E506-3E29-4AD6-94CE-DA993D2E582F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
