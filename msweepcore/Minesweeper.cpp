@@ -357,7 +357,7 @@ bool Minesweeper::TestSpot(int x, int y)
 
 int Minesweeper::GetSurroundingMineCount(int x, int y)
 {
-    int index = ComputeIndex(x, y);
+    ComputeIndex(x, y);
     int count = 0;
 
     if (TestSpot(x + 1, y))
