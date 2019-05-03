@@ -1,6 +1,8 @@
 ﻿#pragma once
 
-#include <Unknwn.h>
+#define WINRT_DIAGNOSTICS
+
+#include <windows.h>
 
 #include <winrt/Windows.ApplicationModel.Core.h>
 #include <winrt/Windows.Foundation.h>

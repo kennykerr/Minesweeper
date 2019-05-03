@@ -2,6 +2,7 @@
 #include "Minesweeper.h"
 
 using namespace winrt;
+using namespace std::literals;
 
 using namespace Windows::ApplicationModel::Core;
 using namespace Windows::Foundation;
@@ -61,7 +62,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
         m_window = window;
     }
 
-    void OnSizeChanged(CoreWindow const& window, WindowSizeChangedEventArgs const& args)
+    void OnSizeChanged(CoreWindow const&, WindowSizeChangedEventArgs const& args)
     {
         auto windowSize = float2(args.Size());
         m_minesweeper->OnParentSizeChanged(windowSize);
@@ -72,13 +73,13 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
         return { m_window.Bounds().Width, m_window.Bounds().Height };
     }
 
-    void OnPointerMoved(IInspectable const& window, PointerEventArgs const& args)
+    void OnPointerMoved(IInspectable const&, PointerEventArgs const& args)
     {
         float2 point = args.CurrentPoint().Position();
         m_minesweeper->OnPointerMoved(point);
     }
 
-    void OnPointerPressed(IInspectable const& window, PointerEventArgs const& args)
+    void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
     {
         m_minesweeper->OnPointerPressed(
             args.CurrentPoint().Properties().IsRightButtonPressed(),
@@ -99,7 +100,44 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
     CoreWindow::PointerPressed_revoker m_pointerPressed;
 };
 
-int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
+fire_and_forget DiagnosticsAsync()
 {
+    while (true)
+    {
+        co_await 5s;
+
+        auto info = impl::get_diagnostics_info().detach();
+
+        std::wstring buffer = L"==========================================\n";
+
+        for (auto&& factory : info.factories)
+        {
+            buffer += L"Factory: " + factory.first + L" (" + std::to_wstring(factory.second.requests) + L") ";
+
+            if (!factory.second.is_agile)
+            {
+                buffer += L"non-agile factory - BAD";
+            }
+
+            buffer += L'\n';
+        }
+
+        buffer += L"------------------------------------------\n";
+
+        for (auto&& query : info.queries)
+        {
+            buffer += L"Query: " + query.first + L" (" + std::to_wstring(query.second) + L")\n";
+        }
+
+        buffer += L"------------------------------------------\n\n";
+
+        OutputDebugStringW(buffer.c_str());
+    }
+}
+
+int __stdcall wWinMain(void*, void*, wchar_t*, int)
+{
+    DiagnosticsAsync();
+
     CoreApplication::Run(make<App>());
 }
