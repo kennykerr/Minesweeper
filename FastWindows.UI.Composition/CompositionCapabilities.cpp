@@ -22,6 +22,5 @@ namespace winrt::FastWindows::UI::Composition::implementation
     }
     void CompositionCapabilities::Changed(winrt::event_token const& token) noexcept
     {
-        throw hresult_not_implemented();
     }
 }

@@ -14,7 +14,6 @@ namespace winrt::FastWindows::UI::Composition::implementation
     }
     void CompositionGraphicsDevice::RenderingDeviceReplaced(winrt::event_token const& token) noexcept
     {
-        throw hresult_not_implemented();
     }
     FastWindows::UI::Composition::CompositionDrawingSurface CompositionGraphicsDevice::CreateDrawingSurface2(Windows::Graphics::SizeInt32 const& sizePixels, Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode)
     {

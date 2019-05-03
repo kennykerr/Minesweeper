@@ -18,6 +18,5 @@ namespace winrt::FastWindows::UI::Composition::implementation
     }
     void CompositionCommitBatch::Completed(winrt::event_token const& token) noexcept
     {
-        throw hresult_not_implemented();
     }
 }
