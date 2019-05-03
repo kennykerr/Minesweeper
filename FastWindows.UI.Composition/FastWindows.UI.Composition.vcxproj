@@ -69,26 +69,34 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <TargetName>FastWindows.UI.Composition</TargetName>
     <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <TargetName>FastWindows.UI.Composition</TargetName>
     <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>FastWindows.UI.Composition</TargetName>
     <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>FastWindows.UI.Composition</TargetName>
     <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>FastWindows.UI.Composition</TargetName>
     <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>FastWindows.UI.Composition</TargetName>
     <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
