@@ -322,7 +322,7 @@
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/nomidl %(AdditionalOptions)</AdditionalOptions>
     </Midl>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
@@ -334,7 +334,7 @@
       <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(OutputPath)$(ProjectName).winmd</Inputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -346,7 +346,7 @@
       <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)$(ProjectName).winmd</Inputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
@@ -563,7 +563,7 @@
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/nomidl %(AdditionalOptions)</AdditionalOptions>
     </Midl>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
@@ -575,7 +575,7 @@
       <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(OutputPath)$(ProjectName).winmd</Inputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
@@ -587,7 +587,7 @@
       <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutputPath)$(ProjectName).winmd</Inputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
