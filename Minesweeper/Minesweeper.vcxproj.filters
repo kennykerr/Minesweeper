@@ -29,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Minesweeper_TemporaryKey.pfx" />
+    <None Include="PropertySheet.props" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
