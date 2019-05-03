@@ -9,6 +9,7 @@ namespace winrt::FastWindows::UI::Composition::implementation
         Windows::UI::Composition::CompositionClip m_object{ nullptr };
 
         CompositionClip(Windows::UI::Composition::CompositionClip const& object) :
+            base_type(object),
             m_object(object)
         {
         }

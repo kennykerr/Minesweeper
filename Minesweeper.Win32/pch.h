@@ -10,6 +10,7 @@
 #include <winrt/Windows.UI.Popups.h>
 #include <winrt/Windows.Graphics.Capture.h>
 #include <winrt/Windows.Graphics.DirectX.Direct3d11.h>
+#include <winrt/FastWindows.UI.Composition.h>
 
 // STL
 #include <atomic>

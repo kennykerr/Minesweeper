@@ -13,7 +13,7 @@ class Minesweeper
 {
 public:
     Minesweeper(
-        winrt::Windows::UI::Composition::ContainerVisual const& parentVisual,
+        winrt::FastWindows::UI::Composition::ContainerVisual const& parentVisual,
         winrt::Windows::Foundation::Numerics::float2 parentSize);
     ~Minesweeper() {}
 
@@ -32,8 +32,8 @@ private:
     void Reveal(int index);
     bool IsInBoundsAndUnmarked(int x, int y);
     void PushIfUnmarked(std::queue<int>& sweeps, int x, int y);
-    winrt::Windows::UI::Composition::CompositionColorBrush GetColorBrushFromMineState(MineState state);
-    winrt::Windows::UI::Composition::CompositionColorBrush GetColorBrushFromMineCount(int count);
+    winrt::FastWindows::UI::Composition::CompositionColorBrush GetColorBrushFromMineState(MineState state);
+    winrt::FastWindows::UI::Composition::CompositionColorBrush GetColorBrushFromMineCount(int count);
     void GenerateMines(int numMines);
     int GenerateIndex(int min, int max);
     int ComputeIndex(int x, int y);
@@ -44,12 +44,12 @@ private:
     int GetSurroundingMineCount(int x, int y);
 
 private:
-    winrt::Windows::UI::Composition::Compositor m_compositor{ nullptr };
-    winrt::Windows::UI::Composition::SpriteVisual m_root{ nullptr };
+    winrt::FastWindows::UI::Composition::Compositor m_compositor{ nullptr };
+    winrt::FastWindows::UI::Composition::SpriteVisual m_root{ nullptr };
 
-    winrt::Windows::UI::Composition::ContainerVisual m_gameBoard{ nullptr };
-    std::vector<winrt::Windows::UI::Composition::SpriteVisual> m_tiles;
-    winrt::Windows::UI::Composition::SpriteVisual m_selectionVisual{ nullptr };
+    winrt::FastWindows::UI::Composition::ContainerVisual m_gameBoard{ nullptr };
+    std::vector<winrt::FastWindows::UI::Composition::SpriteVisual> m_tiles;
+    winrt::FastWindows::UI::Composition::SpriteVisual m_selectionVisual{ nullptr };
 
     int m_gameBoardWidth;
     int m_gameBoardHeight;

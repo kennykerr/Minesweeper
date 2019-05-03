@@ -9,6 +9,7 @@ namespace winrt::FastWindows::UI::Composition::implementation
         Windows::UI::Composition::Visual m_object;
 
         Visual(Windows::UI::Composition::Visual const& object) :
+            base_type(object),
             m_object(object)
         {
         }

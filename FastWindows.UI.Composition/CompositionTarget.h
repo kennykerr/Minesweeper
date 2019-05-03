@@ -9,6 +9,7 @@ namespace winrt::FastWindows::UI::Composition::implementation
         Windows::UI::Composition::CompositionTarget m_object;
 
         CompositionTarget(Windows::UI::Composition::CompositionTarget const& object) :
+            base_type(object),
             m_object(object)
         {
         }

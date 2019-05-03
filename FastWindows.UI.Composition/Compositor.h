@@ -9,6 +9,11 @@ namespace winrt::FastWindows::UI::Composition::implementation
 
         Compositor() = default;
 
+        Compositor(Windows::UI::Composition::Compositor const& object) :
+            m_object(object)
+        {
+        }
+
         static float MaxGlobalPlaybackRate();
         static float MinGlobalPlaybackRate();
         FastWindows::UI::Composition::ColorKeyFrameAnimation CreateColorKeyFrameAnimation();

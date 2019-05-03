@@ -9,6 +9,7 @@ namespace winrt::FastWindows::UI::Composition::implementation
         Windows::UI::Composition::CompositionShadow m_object;
 
         CompositionShadow(Windows::UI::Composition::CompositionShadow const& object) :
+            base_type(object),
             m_object(object)
         {
         }

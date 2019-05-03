@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CompositionObject.h"
 #include "CompositionObject.g.cpp"
+#include "Compositor.h"
 
 namespace winrt::FastWindows::UI::Composition::implementation
 {
@@ -14,7 +15,7 @@ namespace winrt::FastWindows::UI::Composition::implementation
     }
     FastWindows::UI::Composition::Compositor CompositionObject::Compositor()
     {
-        throw hresult_not_implemented();
+        return make<implementation::Compositor>(m_object.Compositor());
     }
     Windows::UI::Core::CoreDispatcher CompositionObject::Dispatcher()
     {

@@ -9,6 +9,7 @@ namespace winrt::FastWindows::UI::Composition::implementation
         Windows::UI::Composition::VisualCollection m_object;
 
         VisualCollection(Windows::UI::Composition::VisualCollection const& object) :
+            base_type(object),
             m_object(object)
         {
         }

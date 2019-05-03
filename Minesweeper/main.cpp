@@ -7,7 +7,7 @@ using namespace Windows::ApplicationModel::Core;
 using namespace Windows::Foundation;
 using namespace Windows::Foundation::Numerics;
 using namespace Windows::UI::Core;
-using namespace Windows::UI::Composition;
+using namespace FastWindows::UI::Composition;
 using namespace Windows::System;
 using namespace Windows::UI;
 using namespace Windows::Graphics::Display;

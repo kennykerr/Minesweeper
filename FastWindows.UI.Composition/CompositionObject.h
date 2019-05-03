@@ -5,7 +5,12 @@ namespace winrt::FastWindows::UI::Composition::implementation
 {
     struct CompositionObject : CompositionObjectT<CompositionObject>
     {
-        CompositionObject() = default;
+        Windows::UI::Composition::CompositionObject m_object;
+
+        CompositionObject(Windows::UI::Composition::CompositionObject const& object) :
+            m_object(object)
+        {
+        }
 
         static void StartAnimationWithIAnimationObject(FastWindows::UI::Composition::IAnimationObject const& target, hstring const& propertyName, FastWindows::UI::Composition::CompositionAnimation const& animation);
         static void StartAnimationGroupWithIAnimationObject(FastWindows::UI::Composition::IAnimationObject const& target, FastWindows::UI::Composition::ICompositionAnimationBase const& animation);

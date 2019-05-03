@@ -285,6 +285,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FastWindows.UI.Composition">
+      <HintPath>..\x64\Debug\FastWindows.UI.Composition.winmd</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.190425.5\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.190425.5\build\native\Microsoft.Windows.CppWinRT.targets')" />
