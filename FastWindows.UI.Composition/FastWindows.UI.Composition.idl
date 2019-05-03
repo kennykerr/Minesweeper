@@ -14,6 +14,15 @@ namespace FastWindows
     {
         namespace Composition
         {
+            [attributeusage(target_runtimeclass)]
+            [attributename("fastabi")]
+            [contract(Windows.Foundation.FoundationContract, 4)]
+            attribute FastAbiAttribute
+            {
+                type Contract;
+                unsigned __int32 Version;
+            }
+
             [contractversion(8)]
             apicontract UniversalApiContract{};
 
@@ -1800,6 +1809,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass AmbientLight : FastWindows.UI.Composition.CompositionLight
@@ -1809,6 +1819,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
             [static(FastWindows.UI.Composition.IAnimationControllerStatics, FastWindows.UI.Composition.UniversalApiContract, 6.0)]
             [threading(both)]
@@ -1818,6 +1829,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 7.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 7.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass AnimationPropertyInfo : FastWindows.UI.Composition.CompositionObject
@@ -1826,6 +1838,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 7.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 7.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass BooleanKeyFrameAnimation : FastWindows.UI.Composition.KeyFrameAnimation
@@ -1834,6 +1847,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass BounceScalarNaturalMotionAnimation : FastWindows.UI.Composition.ScalarNaturalMotionAnimation
@@ -1842,6 +1856,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass BounceVector2NaturalMotionAnimation : FastWindows.UI.Composition.Vector2NaturalMotionAnimation
@@ -1850,6 +1865,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass BounceVector3NaturalMotionAnimation : FastWindows.UI.Composition.Vector3NaturalMotionAnimation
@@ -1858,6 +1874,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass ColorKeyFrameAnimation : FastWindows.UI.Composition.KeyFrameAnimation
@@ -1867,6 +1884,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionAnimationFactory, public, FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionAnimation : FastWindows.UI.Composition.CompositionObject
@@ -1879,6 +1897,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionAnimationGroup : FastWindows.UI.Composition.CompositionObject
@@ -1889,6 +1908,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionBackdropBrush : FastWindows.UI.Composition.CompositionBrush
@@ -1897,6 +1917,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionBatchCompletedEventArgs : FastWindows.UI.Composition.CompositionObject
@@ -1906,6 +1927,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionBrushFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionBrush : FastWindows.UI.Composition.CompositionObject
@@ -1914,6 +1936,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 4.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 4.0)]
             [marshaling_behavior(agile)]
             [static(FastWindows.UI.Composition.ICompositionCapabilitiesStatics, FastWindows.UI.Composition.UniversalApiContract, 4.0)]
             [threading(both)]
@@ -1924,6 +1947,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionClipFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionClip : FastWindows.UI.Composition.CompositionObject
@@ -1933,6 +1957,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionColorBrush : FastWindows.UI.Composition.CompositionBrush
@@ -1941,6 +1966,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionColorGradientStop : FastWindows.UI.Composition.CompositionObject
@@ -1949,6 +1975,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionColorGradientStopCollection
@@ -1959,6 +1986,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionCommitBatch : FastWindows.UI.Composition.CompositionObject
@@ -1967,6 +1995,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionContainerShape : FastWindows.UI.Composition.CompositionShape
@@ -1976,6 +2005,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionDrawingSurfaceFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 4.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionDrawingSurface : FastWindows.UI.Composition.CompositionObject
@@ -1987,6 +2017,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionEasingFunctionFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionEasingFunction : FastWindows.UI.Composition.CompositionObject
@@ -1995,6 +2026,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionEffectBrush : FastWindows.UI.Composition.CompositionBrush
@@ -2003,6 +2035,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionEffectFactory : FastWindows.UI.Composition.CompositionObject
@@ -2012,6 +2045,7 @@ namespace FastWindows
 
             [activatable(FastWindows.UI.Composition.ICompositionEffectSourceParameterFactory, FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionEffectSourceParameter
@@ -2021,6 +2055,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionEllipseGeometry : FastWindows.UI.Composition.CompositionGeometry
@@ -2029,6 +2064,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 7.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionGeometricClip : FastWindows.UI.Composition.CompositionClip
@@ -2038,6 +2074,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionGeometryFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 6.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionGeometry : FastWindows.UI.Composition.CompositionObject
@@ -2047,6 +2084,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionGradientBrushFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 5.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionGradientBrush : FastWindows.UI.Composition.CompositionBrush
@@ -2056,6 +2094,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionGraphicsDevice : FastWindows.UI.Composition.CompositionObject
@@ -2067,6 +2106,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionLightFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 3.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionLight : FastWindows.UI.Composition.CompositionObject
@@ -2077,6 +2117,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionLineGeometry : FastWindows.UI.Composition.CompositionGeometry
@@ -2085,6 +2126,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionLinearGradientBrush : FastWindows.UI.Composition.CompositionGradientBrush
@@ -2093,6 +2135,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionMaskBrush : FastWindows.UI.Composition.CompositionBrush
@@ -2101,6 +2144,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 8.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionMipmapSurface : FastWindows.UI.Composition.CompositionObject
@@ -2110,6 +2154,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionNineGridBrush : FastWindows.UI.Composition.CompositionBrush
@@ -2119,6 +2164,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionObjectFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [static(FastWindows.UI.Composition.ICompositionObjectStatics, FastWindows.UI.Composition.UniversalApiContract, 7.0)]
             [threading(both)]
@@ -2134,6 +2180,7 @@ namespace FastWindows
 
             [activatable(FastWindows.UI.Composition.ICompositionPathFactory, FastWindows.UI.Composition.UniversalApiContract, 6.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionPath
@@ -2143,6 +2190,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionPathGeometry : FastWindows.UI.Composition.CompositionGeometry
@@ -2151,6 +2199,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 8.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionProjectedShadow : FastWindows.UI.Composition.CompositionObject
@@ -2159,6 +2208,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 8.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionProjectedShadowCaster : FastWindows.UI.Composition.CompositionObject
@@ -2166,6 +2216,7 @@ namespace FastWindows
                 [default] interface FastWindows.UI.Composition.ICompositionProjectedShadowCaster;
             }
 
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 8.0)]
             [marshaling_behavior(agile)]
             [static(FastWindows.UI.Composition.ICompositionProjectedShadowCasterCollectionStatics, FastWindows.UI.Composition.UniversalApiContract, 8.0)]
@@ -2177,6 +2228,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 8.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionProjectedShadowReceiver : FastWindows.UI.Composition.CompositionObject
@@ -2185,6 +2237,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 8.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionProjectedShadowReceiverUnorderedCollection : FastWindows.UI.Composition.CompositionObject
@@ -2194,6 +2247,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionPropertySet : FastWindows.UI.Composition.CompositionObject
@@ -2203,6 +2257,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 8.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionRadialGradientBrush : FastWindows.UI.Composition.CompositionGradientBrush
@@ -2211,6 +2266,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionRectangleGeometry : FastWindows.UI.Composition.CompositionGeometry
@@ -2219,6 +2275,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionRoundedRectangleGeometry : FastWindows.UI.Composition.CompositionGeometry
@@ -2227,6 +2284,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionScopedBatch : FastWindows.UI.Composition.CompositionObject
@@ -2236,6 +2294,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionShadowFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 3.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionShadow : FastWindows.UI.Composition.CompositionObject
@@ -2245,6 +2304,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionShapeFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 6.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionShape : FastWindows.UI.Composition.CompositionObject
@@ -2252,6 +2312,7 @@ namespace FastWindows
                 [default] interface FastWindows.UI.Composition.ICompositionShape;
             }
 
+            // Can't have fast abi because default interface is not exclusive
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
@@ -2262,6 +2323,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionSpriteShape : FastWindows.UI.Composition.CompositionShape
@@ -2269,6 +2331,7 @@ namespace FastWindows
                 [default] interface FastWindows.UI.Composition.ICompositionSpriteShape;
             }
 
+            // Can't have fast abi because default interface is not exclusive
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
@@ -2279,6 +2342,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionSurfaceBrush : FastWindows.UI.Composition.CompositionBrush
@@ -2290,6 +2354,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionTargetFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 5.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionTarget : FastWindows.UI.Composition.CompositionObject
@@ -2299,6 +2364,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionTransformFactory, public, FastWindows.UI.Composition.UniversalApiContract, 8.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 8.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionTransform : FastWindows.UI.Composition.CompositionObject
@@ -2307,6 +2373,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionViewBox : FastWindows.UI.Composition.CompositionObject
@@ -2316,6 +2383,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.ICompositionVirtualDrawingSurfaceFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 4.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 4.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionVirtualDrawingSurface : FastWindows.UI.Composition.CompositionDrawingSurface
@@ -2324,6 +2392,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 8.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CompositionVisualSurface : FastWindows.UI.Composition.CompositionObject
@@ -2333,6 +2402,7 @@ namespace FastWindows
             }
 
             [activatable(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [static(FastWindows.UI.Composition.ICompositorStatics, FastWindows.UI.Composition.UniversalApiContract, 6.0)]
@@ -2353,6 +2423,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.IContainerVisualFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass ContainerVisual : FastWindows.UI.Composition.Visual
@@ -2361,6 +2432,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass CubicBezierEasingFunction : FastWindows.UI.Composition.CompositionEasingFunction
@@ -2368,6 +2440,7 @@ namespace FastWindows
                 [default] interface FastWindows.UI.Composition.ICubicBezierEasingFunction;
             }
 
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
@@ -2378,6 +2451,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass DropShadow : FastWindows.UI.Composition.CompositionShadow
@@ -2387,6 +2461,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass ExpressionAnimation : FastWindows.UI.Composition.CompositionAnimation
@@ -2395,6 +2470,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass ImplicitAnimationCollection : FastWindows.UI.Composition.CompositionObject
@@ -2404,6 +2480,7 @@ namespace FastWindows
                 interface Windows.Foundation.Collections.IMap<HSTRING, FastWindows.UI.Composition.ICompositionAnimationBase*>;
             }
 
+            // Can't have fast abi because default interface is not exclusive
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
@@ -2414,6 +2491,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass InsetClip : FastWindows.UI.Composition.CompositionClip
@@ -2423,6 +2501,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.IKeyFrameAnimationFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass KeyFrameAnimation : FastWindows.UI.Composition.CompositionAnimation
@@ -2433,6 +2512,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass LayerVisual : FastWindows.UI.Composition.ContainerVisual
@@ -2442,6 +2522,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass LinearEasingFunction : FastWindows.UI.Composition.CompositionEasingFunction
@@ -2451,6 +2532,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.INaturalMotionAnimationFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 5.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass NaturalMotionAnimation : FastWindows.UI.Composition.CompositionAnimation
@@ -2459,6 +2541,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass PathKeyFrameAnimation : FastWindows.UI.Composition.KeyFrameAnimation
@@ -2467,6 +2550,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass PointLight : FastWindows.UI.Composition.CompositionLight
@@ -2477,6 +2561,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass QuaternionKeyFrameAnimation : FastWindows.UI.Composition.KeyFrameAnimation
@@ -2485,6 +2570,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 7.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass RedirectVisual : FastWindows.UI.Composition.ContainerVisual
@@ -2493,6 +2579,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass RenderingDeviceReplacedEventArgs : FastWindows.UI.Composition.CompositionObject
@@ -2501,6 +2588,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass ScalarKeyFrameAnimation : FastWindows.UI.Composition.KeyFrameAnimation
@@ -2510,6 +2598,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.IScalarNaturalMotionAnimationFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 5.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass ScalarNaturalMotionAnimation : FastWindows.UI.Composition.NaturalMotionAnimation
@@ -2518,6 +2607,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 6.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass ShapeVisual : FastWindows.UI.Composition.ContainerVisual
@@ -2526,6 +2616,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass SpotLight : FastWindows.UI.Composition.CompositionLight
@@ -2536,6 +2627,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass SpringScalarNaturalMotionAnimation : FastWindows.UI.Composition.ScalarNaturalMotionAnimation
@@ -2544,6 +2636,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass SpringVector2NaturalMotionAnimation : FastWindows.UI.Composition.Vector2NaturalMotionAnimation
@@ -2552,6 +2645,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass SpringVector3NaturalMotionAnimation : FastWindows.UI.Composition.Vector3NaturalMotionAnimation
@@ -2560,6 +2654,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass SpriteVisual : FastWindows.UI.Composition.ContainerVisual
@@ -2569,6 +2664,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass StepEasingFunction : FastWindows.UI.Composition.CompositionEasingFunction
@@ -2577,6 +2673,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass Vector2KeyFrameAnimation : FastWindows.UI.Composition.KeyFrameAnimation
@@ -2586,6 +2683,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.IVector2NaturalMotionAnimationFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 5.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass Vector2NaturalMotionAnimation : FastWindows.UI.Composition.NaturalMotionAnimation
@@ -2594,6 +2692,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass Vector3KeyFrameAnimation : FastWindows.UI.Composition.KeyFrameAnimation
@@ -2603,6 +2702,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.IVector3NaturalMotionAnimationFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 5.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 5.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass Vector3NaturalMotionAnimation : FastWindows.UI.Composition.NaturalMotionAnimation
@@ -2611,6 +2711,7 @@ namespace FastWindows
             }
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass Vector4KeyFrameAnimation : FastWindows.UI.Composition.KeyFrameAnimation
@@ -2620,6 +2721,7 @@ namespace FastWindows
 
             [composable(FastWindows.UI.Composition.IVisualFactory, protected, FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass Visual : FastWindows.UI.Composition.CompositionObject
@@ -2630,6 +2732,7 @@ namespace FastWindows
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [marshaling_behavior(agile)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [threading(both)]
             runtimeclass VisualCollection : FastWindows.UI.Composition.CompositionObject
             {
@@ -2639,6 +2742,7 @@ namespace FastWindows
 
             [contract(FastWindows.UI.Composition.UniversalApiContract, 3.0)]
             [marshaling_behavior(agile)]
+            [fastabi(FastWindows.UI.Composition.UniversalApiContract, 2.0)]
             [threading(both)]
             runtimeclass VisualUnorderedCollection : FastWindows.UI.Composition.CompositionObject
             {
