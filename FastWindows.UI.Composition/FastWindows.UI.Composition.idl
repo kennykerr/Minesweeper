@@ -1,8 +1,4 @@
 
-import "inspectable.idl";
-import "AsyncInfo.idl";
-import "EventToken.idl";
-import "windowscontracts.idl";
 import "Windows.Foundation.idl";
 import "Windows.Foundation.Numerics.idl";
 import "Windows.Graphics.idl";

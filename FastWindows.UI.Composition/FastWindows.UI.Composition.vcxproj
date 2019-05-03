@@ -68,21 +68,27 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <TargetName>FastWindows.UI.Composition</TargetName>
+    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <TargetName>FastWindows.UI.Composition</TargetName>
+    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>FastWindows.UI.Composition</TargetName>
+    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>FastWindows.UI.Composition</TargetName>
+    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>FastWindows.UI.Composition</TargetName>
+    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>FastWindows.UI.Composition</TargetName>
+    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -108,12 +114,18 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MultiThreadedDebug</RuntimeLibrary>
       <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(ProjectDir)Generated Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Generated Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Generated Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</MultiProcessorCompilation>
       <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</MultiProcessorCompilation>
       <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</MultiProcessorCompilation>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ConformanceMode>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ConformanceMode>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ConformanceMode>
     </ClCompile>
     <Link>
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">onecore.lib</AdditionalDependencies>
@@ -121,18 +133,240 @@
     <Link>
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">onecore.lib</AdditionalDependencies>
     </Link>
+    <Midl>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+    </Midl>
+    <Midl>
+      <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</EnableWindowsRuntime>
+    </Midl>
+    <Midl>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <WarnAsError Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <DefaultCharType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <MetadataFileName Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(OutputPath)$(ProjectName).winmd</MetadataFileName>
+    </Midl>
+    <Midl>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">nul</HeaderFileName>
+    </Midl>
+    <Midl>
+      <GenerateTypeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckAllocations Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckBounds Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckEnumRange Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckRefPointers Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckStubData Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </Midl>
+    <Midl>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+    </Midl>
+    <Midl>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+    </Midl>
+    <Midl>
+      <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</EnableWindowsRuntime>
+    </Midl>
+    <Midl>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <WarnAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <DefaultCharType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <MetadataFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)$(ProjectName).winmd</MetadataFileName>
+    </Midl>
+    <Midl>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nul</HeaderFileName>
+    </Midl>
+    <Midl>
+      <GenerateTypeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckAllocations Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckBounds Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckEnumRange Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckRefPointers Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckStubData Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Midl>
+    <Midl>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+    </Midl>
+    <Midl>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+    </Midl>
+    <Midl>
+      <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableWindowsRuntime>
+    </Midl>
+    <Midl>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <WarnAsError Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <DefaultCharType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <MetadataFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutputPath)$(ProjectName).winmd</MetadataFileName>
+    </Midl>
+    <Midl>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nul</HeaderFileName>
+    </Midl>
+    <Midl>
+      <GenerateTypeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckAllocations Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckBounds Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckEnumRange Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckRefPointers Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckStubData Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </Midl>
+    <Midl>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+    </Midl>
+    <CustomBuildStep>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Generated Files\module.g.cpp</Outputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(OutputPath)$(ProjectName).winmd</Inputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generated Files\module.g.cpp</Outputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)$(ProjectName).winmd</Inputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generated Files\module.g.cpp</Outputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutputPath)$(ProjectName).winmd</Inputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
     <ClCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MultiThreaded</RuntimeLibrary>
       <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)Forward;%(AdditionalIncludeDirectories);$(GeneratedFilesDir);</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(ProjectDir)Generated Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)Generated Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)Generated Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</MultiProcessorCompilation>
       <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</MultiProcessorCompilation>
       <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</MultiProcessorCompilation>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ConformanceMode>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ConformanceMode>
+      <ConformanceMode Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ConformanceMode>
     </ClCompile>
     <Link>
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">onecore.lib</AdditionalDependencies>
@@ -140,6 +374,222 @@
     <Link>
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">onecore.lib</AdditionalDependencies>
     </Link>
+    <Midl>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+    </Midl>
+    <Midl>
+      <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</EnableWindowsRuntime>
+    </Midl>
+    <Midl>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <WarnAsError Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <DefaultCharType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <MetadataFileName Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(OutputPath)$(ProjectName).winmd</MetadataFileName>
+    </Midl>
+    <Midl>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">nul</HeaderFileName>
+    </Midl>
+    <Midl>
+      <GenerateTypeLibrary Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckAllocations Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckBounds Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckEnumRange Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckRefPointers Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckStubData Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </Midl>
+    <Midl>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+    </Midl>
+    <Midl>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+    </Midl>
+    <Midl>
+      <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</EnableWindowsRuntime>
+    </Midl>
+    <Midl>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <WarnAsError Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <DefaultCharType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <MetadataFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutputPath)$(ProjectName).winmd</MetadataFileName>
+    </Midl>
+    <Midl>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nul</HeaderFileName>
+    </Midl>
+    <Midl>
+      <GenerateTypeLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckAllocations Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckBounds Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckEnumRange Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckRefPointers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckStubData Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Midl>
+    <Midl>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+    </Midl>
+    <Midl>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+    </Midl>
+    <Midl>
+      <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableWindowsRuntime>
+    </Midl>
+    <Midl>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <WarnAsError Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <DefaultCharType Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <MetadataFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutputPath)$(ProjectName).winmd</MetadataFileName>
+    </Midl>
+    <Midl>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nul</HeaderFileName>
+    </Midl>
+    <Midl>
+      <GenerateTypeLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckAllocations Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckBounds Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckEnumRange Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckRefPointers Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <ErrorCheckStubData Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <StructMemberAlignment Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </Midl>
+    <Midl>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+    </Midl>
+    <CustomBuildStep>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Generated Files\module.g.cpp</Outputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(OutputPath)$(ProjectName).winmd</Inputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generated Files\module.g.cpp</Outputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutputPath)$(ProjectName).winmd</Inputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -fastabi</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generated Files\module.g.cpp</Outputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutputPath)$(ProjectName).winmd</Inputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -211,6 +661,7 @@
     <ClCompile Include="DistantLight.cpp" />
     <ClCompile Include="DropShadow.cpp" />
     <ClCompile Include="ExpressionAnimation.cpp" />
+    <ClCompile Include="Generated Files\module.g.cpp" />
     <ClCompile Include="ImplicitAnimationCollection.cpp" />
     <ClCompile Include="InitialValueExpressionCollection.cpp" />
     <ClCompile Include="InsetClip.cpp" />
@@ -222,7 +673,6 @@
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
     <ClCompile Include="PointLight.cpp" />
     <ClCompile Include="QuaternionKeyFrameAnimation.cpp" />
     <ClCompile Include="RedirectVisual.cpp" />
