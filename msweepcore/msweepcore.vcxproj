@@ -168,7 +168,7 @@
       <AdditionalDependencies>windowsapp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
@@ -186,7 +186,7 @@
       <AdditionalDependencies>windowsapp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
@@ -203,7 +203,7 @@
       <AdditionalDependencies>windowsapp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -221,7 +221,7 @@
       <AdditionalDependencies>windowsapp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -243,7 +243,7 @@
       <AdditionalDependencies>windowsapp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -265,7 +265,7 @@
       <AdditionalDependencies>windowsapp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -287,7 +287,7 @@
       <AdditionalDependencies>windowsapp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
@@ -308,7 +308,7 @@
       <AdditionalDependencies>windowsapp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command>$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

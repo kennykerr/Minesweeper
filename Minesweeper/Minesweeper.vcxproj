@@ -170,28 +170,28 @@
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)msweepcore.lib;onecore.lib</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
     <PreBuildEvent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
     <PreBuildEvent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
     <PreBuildEvent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
     <PreBuildEvent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
     <PreBuildEvent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
     <PreBuildEvent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
     <PreBuildEvent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)depends\cppwinrt -in sdk $(OutputPath)FastWindows.UI.Composition.winmd -out "Generated Files" -verbose</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
