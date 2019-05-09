@@ -289,7 +289,7 @@
       <MetadataFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutputPath)$(ProjectName).winmd</MetadataFileName>
     </Midl>
     <Midl>
-      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nul</HeaderFileName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">abi.h</HeaderFileName>
     </Midl>
     <Midl>
       <GenerateTypeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
@@ -319,7 +319,7 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/nomidl /fastabi %(AdditionalOptions)</AdditionalOptions>
     </Midl>
     <CustomBuildStep>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>

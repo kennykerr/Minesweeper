@@ -14,16 +14,6 @@ namespace winrt::FastWindows::UI::Composition::implementation
         {
         }
 
-        int32_t query_interface_tearoff(guid const& id, void** result) const noexcept override
-        {
-            if (is_guid_of<IVisual2>(id))
-            {
-                *result = new impl::fast_abi_forwarder(static_cast<impl::inspectable_abi*>(get_abi<Composition::Visual>()), guid_of<IVisual2>(), 34);
-            }
-
-            return base_type::query_interface_tearoff(id, result);
-        }
-
         Windows::Foundation::Numerics::float2 AnchorPoint();
         void AnchorPoint(Windows::Foundation::Numerics::float2 value);
         Windows::UI::Composition::CompositionBackfaceVisibility BackfaceVisibility();
