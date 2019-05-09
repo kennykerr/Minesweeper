@@ -199,7 +199,7 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">/fastabi /nomidl</AdditionalOptions>
     </Midl>
     <Midl>
       <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)depends</AdditionalMetadataDirectories>
@@ -259,7 +259,7 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/fastabi /nomidl</AdditionalOptions>
     </Midl>
     <Midl>
       <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)depends</AdditionalMetadataDirectories>
@@ -289,7 +289,7 @@
       <MetadataFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutputPath)$(ProjectName).winmd</MetadataFileName>
     </Midl>
     <Midl>
-      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">abi.h</HeaderFileName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nul</HeaderFileName>
     </Midl>
     <Midl>
       <GenerateTypeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
@@ -319,7 +319,7 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/nomidl /fastabi %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/fastabi /nomidl</AdditionalOptions>
     </Midl>
     <CustomBuildStep>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
@@ -440,7 +440,7 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">/fastabi /nomidl</AdditionalOptions>
     </Midl>
     <Midl>
       <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)depends</AdditionalMetadataDirectories>
@@ -500,7 +500,7 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/fastabi /nomidl</AdditionalOptions>
     </Midl>
     <Midl>
       <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)depends</AdditionalMetadataDirectories>
@@ -560,7 +560,7 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/nomidl %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/fastabi /nomidl</AdditionalOptions>
     </Midl>
     <CustomBuildStep>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
