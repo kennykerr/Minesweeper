@@ -169,6 +169,12 @@
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">onecore.lib</AdditionalDependencies>
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">onecore.lib</AdditionalDependencies>
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">onecore.lib</AdditionalDependencies>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</GenerateMapFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</GenerateMapFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateMapFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateMapFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateMapFile>
+      <GenerateMapFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateMapFile>
     </Link>
     <PreBuildEvent>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
