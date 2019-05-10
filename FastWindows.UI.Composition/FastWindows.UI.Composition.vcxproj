@@ -391,6 +391,9 @@
       <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
       </Inputs>
     </CustomBuildStep>
+    <Link>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">onecore.lib</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
     <ClCompile>
@@ -641,6 +644,9 @@
       <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </Inputs>
     </CustomBuildStep>
+    <Link>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">onecore.lib</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
