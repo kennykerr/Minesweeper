@@ -3,9 +3,11 @@
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Minesweeper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Minesweeper.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Logo.scale-100.png">
@@ -30,6 +32,7 @@
   <ItemGroup>
     <None Include="Minesweeper_TemporaryKey.pfx" />
     <None Include="PropertySheet.props" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">

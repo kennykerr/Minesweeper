@@ -100,6 +100,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
     CoreWindow::PointerPressed_revoker m_pointerPressed;
 };
 
+#if defined(WINRT_DIAGNOSTICS)
 fire_and_forget DiagnosticsAsync()
 {
     while (true)
@@ -134,10 +135,13 @@ fire_and_forget DiagnosticsAsync()
         OutputDebugStringW(buffer.c_str());
     }
 }
+#endif
 
 int __stdcall wWinMain(void*, void*, wchar_t*, int)
 {
+#if defined(WINRT_DIAGNOSTICS)
     DiagnosticsAsync();
+#endif
 
     CoreApplication::Run(make<App>());
 }

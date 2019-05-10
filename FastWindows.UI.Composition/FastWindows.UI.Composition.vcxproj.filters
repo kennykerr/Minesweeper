@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="AmbientLight.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationController.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationPropertyInfo.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="BooleanKeyFrameAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="BounceScalarNaturalMotionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="BounceVector2NaturalMotionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="BounceVector3NaturalMotionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorKeyFrameAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionAnimationGroup.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionBackdropBrush.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionBatchCompletedEventArgs.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionBrush.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionCapabilities.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionClip.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionColorBrush.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionColorGradientStop.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionColorGradientStopCollection.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionCommitBatch.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionContainerShape.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionDrawingSurface.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionEasingFunction.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionEffectBrush.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionEffectFactory.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionEffectSourceParameter.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionEllipseGeometry.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionGeometricClip.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionGeometry.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionGradientBrush.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionGraphicsDevice.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionLight.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionLinearGradientBrush.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionLineGeometry.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionMaskBrush.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionMipmapSurface.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionNineGridBrush.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionObject.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionPath.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionPathGeometry.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionProjectedShadow.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionProjectedShadowCaster.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionProjectedShadowCasterCollection.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionProjectedShadowReceiver.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionProjectedShadowReceiverUnorderedCollection.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionPropertySet.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionRadialGradientBrush.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionRectangleGeometry.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionRoundedRectangleGeometry.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionScopedBatch.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionShadow.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionShape.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionShapeCollection.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionSpriteShape.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionStrokeDashArray.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionSurfaceBrush.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionTarget.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionTransform.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionViewBox.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionVirtualDrawingSurface.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositionVisualSurface.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Compositor.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainerVisual.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CubicBezierEasingFunction.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="DistantLight.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="DropShadow.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplicitAnimationCollection.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="InitialValueExpressionCollection.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="InsetClip.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyFrameAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearEasingFunction.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="LayerVisual.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="NaturalMotionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="PathKeyFrameAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLight.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="QuaternionKeyFrameAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="RedirectVisual.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingDeviceReplacedEventArgs.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ScalarKeyFrameAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ScalarNaturalMotionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapeVisual.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotLight.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="SpringScalarNaturalMotionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="SpringVector2NaturalMotionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="SpringVector3NaturalMotionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteVisual.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="StepEasingFunction.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2KeyFrameAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2NaturalMotionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3KeyFrameAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3NaturalMotionAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector4KeyFrameAnimation.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Visual.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualCollection.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="VisualUnorderedCollection.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="FastWindows.UI.Composition.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="exports.def" />
+    <None Include="PropertySheet.props" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Implementation">
+      <UniqueIdentifier>{87ad80f9-6a19-4981-9d74-5ae0a9bed4e6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
