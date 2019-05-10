@@ -8,4 +8,8 @@
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="Minesweeper.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="PropertySheet.props" />
+  </ItemGroup>
 </Project>

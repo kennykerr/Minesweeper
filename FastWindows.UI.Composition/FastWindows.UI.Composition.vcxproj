@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.190509.7\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.190509.7\build\native\Microsoft.Windows.CppWinRT.props')" />
   <PropertyGroup Label="Globals">
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <MinimalCoreWin>true</MinimalCoreWin>
@@ -65,37 +66,61 @@
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <TargetName>FastWindows.UI.Composition</TargetName>
-    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <TargetName>FastWindows.UI.Composition</TargetName>
-    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>FastWindows.UI.Composition</TargetName>
-    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>FastWindows.UI.Composition</TargetName>
-    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>FastWindows.UI.Composition</TargetName>
-    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>FastWindows.UI.Composition</TargetName>
-    <CustomBuildAfterTargets>Midl</CustomBuildAfterTargets>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
@@ -142,7 +167,7 @@
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">onecore.lib</AdditionalDependencies>
     </Link>
     <Midl>
-      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(WindowsSDK_MetadataFoundationPath);%(AdditionalMetadataDirectories)</AdditionalMetadataDirectories>
     </Midl>
     <Midl>
       <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</EnableWindowsRuntime>
@@ -199,10 +224,10 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">/fastabi /nomidl</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">%(AdditionalOptions) /nomidl /fastabi</AdditionalOptions>
     </Midl>
     <Midl>
-      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(WindowsSDK_MetadataFoundationPath);%(AdditionalMetadataDirectories)</AdditionalMetadataDirectories>
     </Midl>
     <Midl>
       <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</EnableWindowsRuntime>
@@ -259,10 +284,10 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/fastabi /nomidl</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalOptions) /nomidl /fastabi</AdditionalOptions>
     </Midl>
     <Midl>
-      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(WindowsSDK_MetadataFoundationPath);%(AdditionalMetadataDirectories)</AdditionalMetadataDirectories>
     </Midl>
     <Midl>
       <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableWindowsRuntime>
@@ -319,43 +344,52 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/fastabi /nomidl</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /nomidl /fastabi</AdditionalOptions>
     </Midl>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Generated Files\module.g.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(OutputPath)$(ProjectName).winmd</Inputs>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </Inputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generated Files\module.g.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutputPath)$(ProjectName).winmd</Inputs>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Inputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generated Files\module.g.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutputPath)$(ProjectName).winmd</Inputs>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Inputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
@@ -383,7 +417,7 @@
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">onecore.lib</AdditionalDependencies>
     </Link>
     <Midl>
-      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(WindowsSDK_MetadataFoundationPath);%(AdditionalMetadataDirectories)</AdditionalMetadataDirectories>
     </Midl>
     <Midl>
       <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</EnableWindowsRuntime>
@@ -440,10 +474,10 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">/fastabi /nomidl</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">%(AdditionalOptions) /nomidl /fastabi</AdditionalOptions>
     </Midl>
     <Midl>
-      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(WindowsSDK_MetadataFoundationPath);%(AdditionalMetadataDirectories)</AdditionalMetadataDirectories>
     </Midl>
     <Midl>
       <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</EnableWindowsRuntime>
@@ -500,10 +534,10 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/fastabi /nomidl</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalOptions) /nomidl /fastabi</AdditionalOptions>
     </Midl>
     <Midl>
-      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)depends</AdditionalMetadataDirectories>
+      <AdditionalMetadataDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(WindowsSDK_MetadataFoundationPath);%(AdditionalMetadataDirectories)</AdditionalMetadataDirectories>
     </Midl>
     <Midl>
       <EnableWindowsRuntime Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableWindowsRuntime>
@@ -560,43 +594,52 @@
       <MinimumTargetSystem Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
     </Midl>
     <Midl>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/fastabi /nomidl</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /nomidl /fastabi</AdditionalOptions>
     </Midl>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Generated Files\module.g.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(OutputPath)$(ProjectName).winmd</Inputs>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </Inputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generated Files\module.g.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutputPath)$(ProjectName).winmd</Inputs>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Inputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)depends\cppwinrt -ref sdk $(OutputPath)$(ProjectName).winmd -include $(ProjectName) -name $(ProjectName) -comp -out "Generated Files" -verbose -prefix -opt -base -fastabi</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generated Files\module.g.cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutputPath)$(ProjectName).winmd</Inputs>
+      <Inputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Inputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -669,7 +712,6 @@
     <ClCompile Include="DistantLight.cpp" />
     <ClCompile Include="DropShadow.cpp" />
     <ClCompile Include="ExpressionAnimation.cpp" />
-    <ClCompile Include="Generated Files\module.g.cpp" />
     <ClCompile Include="ImplicitAnimationCollection.cpp" />
     <ClCompile Include="InitialValueExpressionCollection.cpp" />
     <ClCompile Include="InsetClip.cpp" />
@@ -708,7 +750,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="exports.def" />
+    <None Include="packages.config" />
+    <None Include="PropertySheet.props" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.190509.7\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.190509.7\build\native\Microsoft.Windows.CppWinRT.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.190509.7\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.190509.7\build\native\Microsoft.Windows.CppWinRT.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.190509.7\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.190509.7\build\native\Microsoft.Windows.CppWinRT.targets'))" />
+  </Target>
 </Project>

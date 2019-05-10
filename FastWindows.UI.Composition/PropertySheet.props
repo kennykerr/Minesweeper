@@ -3,8 +3,9 @@
     <PropertyGroup Label="UserMacros">
         <!-- https://github.com/Microsoft/xlang/tree/master/src/package/cppwinrt/nuget -->
         <CppWinRTVerbosity>high</CppWinRTVerbosity>
+        <CppWinRTModernIDL>false</CppWinRTModernIDL>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\FastWindows.UI.Composition\FastWindows.UI.Composition.vcxproj" />
+        <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
     </ItemGroup>
 </Project>
