@@ -3,6 +3,7 @@
     <PropertyGroup Label="UserMacros">
         <!-- https://github.com/Microsoft/xlang/tree/master/src/package/cppwinrt/nuget -->
         <CppWinRTVerbosity>high</CppWinRTVerbosity>
+        <CppWinRTFastAbi>true</CppWinRTFastAbi>
     </PropertyGroup>
     <ItemGroup>
         <ProjectReference Include="..\FastWindows.UI.Composition\FastWindows.UI.Composition.vcxproj" />
